@@ -1,8 +1,4 @@
-let need_to_install_plugins = 0
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://github.com/junegunn/vim-plug/raw/master/plug.vim
-  let need_to_install_plugins = 1
-endif
+
 
 " Plugins
 call plug#begin()
@@ -327,13 +323,6 @@ set bg=dark
 
 filetype plugin indent on
 syntax on
-
-if need_to_install_plugins == 1
-      echo Installing plugins..."
-          silent! PlugInstall
-              echo ""Done!"
-                  q
-endif
 
 set laststatus=2
 
